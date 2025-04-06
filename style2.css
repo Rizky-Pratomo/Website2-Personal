@@ -71,7 +71,7 @@ body {
     color: white;
 }
 .dark-mode .header {
-    background-color: #c017eb;
+    background-color: rgba(85, 17, 110, 0.9);
 }
 .dark-mode .materi-box {
     background-color: rgba(85, 17, 110, 0.9);

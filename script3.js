@@ -1,22 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const toggleDarkMode = document.getElementById("toggleDarkMode");
     const body = document.body;
 
-    // Cek status dark mode
-    if (localStorage.getItem("dark-mode") === "enabled") {
+    // Cek dan terapkan status dark mode dari localStorage
+    const isDarkMode = localStorage.getItem("dark-mode") === "enabled";
+    if (isDarkMode) {
         body.classList.add("dark-mode");
         toggleDarkMode.innerText = "Light Mode ☀️";
     }
 
-    toggleDarkMode.addEventListener("click", function () {
+    // Event listener untuk tombol dark mode
+    toggleDarkMode.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
 
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("dark-mode", "enabled");
-            toggleDarkMode.innerText = "Light Mode ☀️";
-        } else {
-            localStorage.setItem("dark-mode", "disabled");
-            toggleDarkMode.innerText = "Dark Mode 🌙";
-        }
+        const darkModeAktif = body.classList.contains("dark-mode");
+        toggleDarkMode.innerText = darkModeAktif ? "Light Mode ☀️" : "Dark Mode 🌙";
+        localStorage.setItem("dark-mode", darkModeAktif ? "enabled" : "disabled");
     });
 });

@@ -10,24 +10,26 @@ body {
 
 /* DARK MODE */
 .dark-mode {
-    background-color: #1a1a2e;
+    background-color: #521c41;
     color: white;
 }
 
 /* HEADER */
 .header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #4b0082;
+    background-color: rgba(85, 17, 110, 0.9);
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header h1 {
+.judul {
     margin: 0;
     font-size: 24px;
+    white-space: nowrap;
 }
 
 /* NAVIGATION */
@@ -35,7 +37,10 @@ body {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap; /* ✅ agar responsif di mobile */
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .nav ul li {
@@ -110,7 +115,7 @@ body {
 
 .dark-mode .kesan-box,
 .dark-mode .pesan-box {
-    background-color: #2e2e4f;
+    background-color: rgba(85, 17, 110, 0.9);
     color: white;
 }
 
