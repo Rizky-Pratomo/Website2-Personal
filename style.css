@@ -93,6 +93,14 @@ body {
     transform: scale(1.05);
   }
   
+  /* TRANSISI UNTUK ANIMASI MODE TERANG & GELAP */
+body,
+.header,
+.materi-box,
+#toggleDarkMode {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
   /* Glow effect */
   .profile-container::before {
     content: "";

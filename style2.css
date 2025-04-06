@@ -25,28 +25,46 @@ body {
     margin: 10px 0;
 }
 
+/* TRANSISI UNTUK ANIMASI MODE TERANG & GELAP */
+body,
+.header,
+.materi-box,
+#toggleDarkMode {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* NAVIGATION */
 .nav ul {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     padding: 0;
+    display: flex;
+    gap: 15px;
     justify-content: center;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
+
 .nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: 0.3s;
-    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #6a0dad;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
-.nav ul li a:hover,
+
+.nav ul li a:hover {
+    background: #8a2be2;
+    transform: scale(1.1);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
 .nav ul li a.active {
-    background-color: #814494;
+    background: #9400d3;
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* DARK MODE BUTTON */
