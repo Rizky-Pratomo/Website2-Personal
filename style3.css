@@ -1,0 +1,139 @@
+/* BACKGROUND DEFAULT */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #d3bfcd;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #1a1a2e;
+    color: white;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #4b0082;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* NAVIGATION */
+.nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #6a0dad;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav ul li a:hover {
+    background: #8a2be2;
+    transform: scale(1.1);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav ul li a.active {
+    background: #9400d3;
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* DARK MODE BUTTON */
+#toggleDarkMode {
+    align-self: flex-end;
+    background: rgba(209, 149, 221, 0.2);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+#toggleDarkMode:hover {
+    background: #7b37d3;
+}
+
+/* KESAN & PESAN CONTAINER */
+.kesan-pesan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* BOX */
+.kesan-box, .pesan-box {
+    background-color: rgb(233, 228, 235);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.dark-mode .kesan-box,
+.dark-mode .pesan-box {
+    background-color: #2e2e4f;
+    color: white;
+}
+
+.kesan-box::before,
+.pesan-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.kesan-box:hover::before,
+.pesan-box:hover::before {
+    transform: scale(1.5);
+}
+
+.kesan-box:hover,
+.pesan-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px rgba(138, 43, 226, 0.7);
+}

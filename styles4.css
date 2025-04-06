@@ -1,0 +1,147 @@
+/* Reset & Umum */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: #d3bfcd;
+    color: black;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #440132;
+    color: white;
+}
+
+/* Navigasi */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #6a0dad;
+    color: white;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #8a2be2;
+    transform: scale(1.05);
+}
+
+.active {
+    background: #8a2be2;
+}
+
+/* Dark Mode Toggle */
+#toggleDarkMode {
+    background-color: rgba(207, 0, 243, 0.2);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: black;
+}
+
+.dark-mode #toggleDarkMode {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#toggleDarkMode:hover {
+    background: #e077ee;
+}
+
+/* Quiz Container */
+.quiz-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.dark-mode .quiz-container {
+    background: #311f2a;
+}
+
+/* Judul & Pertanyaan */
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.quiz-question {
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Jawaban */
+.answer {
+    display: block;
+    padding: 10px 15px;
+    margin: 6px 0;
+    border-radius: 8px;
+    background: #d6c4d6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.answer:hover {
+    background: #6a0dad;
+    color: white;
+    transform: scale(1.03);
+}
+
+.dark-mode .answer {
+    background: #444;
+    color: white;
+}
+
+.dark-mode .answer:hover {
+    background: #8a2be2;
+    transform: scale(1.03);
+}
+
+/* Tombol Periksa Jawaban */
+#checkAnswers {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #6a0dad;
+    color: white;
+    transition: background 0.3s;
+}
+
+#checkAnswers:hover {
+    background: #8a2be2;
+}
+
+/* Hasil Quiz */
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}

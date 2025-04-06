@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Bebas - Quiz Interaktif</title>
+    <link rel="stylesheet" href="styles4.css">
+    <script defer src="script4.js"></script>
+</head>
+<body>
+    <!-- Navigasi -->
+    <div class="nav-container">
+        <button class="nav-btn" onclick="window.location.href='index.html'">Home</button>
+        <button class="nav-btn" onclick="window.location.href='penerapan-ti.html'">Penerapan TI</button>
+        <button class="nav-btn" onclick="window.location.href='kesan-pesan.html'">Kesan & Pesan</button>
+        <button class="nav-btn active">Halaman Bebas</button>
+
+        <!-- Dark Mode Toggle -->
+        <button id="toggleDarkMode">Dark Mode 🌙</button>
+    </div>
+
+    <!-- Judul -->
+    <h1>Quiz</h1>
+
+    <!-- Box Quiz -->
+    <div class="quiz-container">
+        <h2>Ayo Tes Pengetahuanmu tentang Perpustakaan!</h2>
+
+        <div class="quiz-question">
+            <p>1. Apa kepanjangan dari OPAC?</p>
+            <label class="answer"><input type="radio" name="q1" value="wrong1"> Open Protocol for Automated Catalog</label>
+            <label class="answer"><input type="radio" name="q1" value="correct"> Online Public Access Catalog</label>
+            <label class="answer"><input type="radio" name="q1" value="wrong2"> Online Publication and Catalog</label>
+        </div>
+
+        <div class="quiz-question">
+            <p>2. Teknologi apa yang digunakan perpustakaan untuk peminjaman otomatis?</p>
+            <label class="answer"><input type="radio" name="q2" value="correct"> RFID</label>
+            <label class="answer"><input type="radio" name="q2" value="wrong1"> Barcode</label>
+            <label class="answer"><input type="radio" name="q2" value="wrong2"> Microfiche</label>
+        </div>
+
+        <div class="quiz-question">
+            <p>3. Apa fungsi utama dari OPAC?</p>
+            <label class="answer"><input type="radio" name="q3" value="correct"> Mencari koleksi buku di perpustakaan</label>
+            <label class="answer"><input type="radio" name="q3" value="wrong1"> Meminjamkan buku secara otomatis</label>
+            <label class="answer"><input type="radio" name="q3" value="wrong2"> Mengarsipkan jurnal cetak</label>
+        </div>
+
+        <!-- Tombol Periksa Jawaban -->
+        <button id="checkAnswers">Periksa Jawaban</button>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
